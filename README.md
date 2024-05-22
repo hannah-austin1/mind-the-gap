@@ -1,3 +1,5 @@
+# %projectName%
+
 This is a [Next.js](https://nextjs.org/) multiplayer game project bootstrapped with [`create-multiplayer-game`](https://github.com/grayhatdevelopers/create-multiplayer-game).
 
 ## Features
