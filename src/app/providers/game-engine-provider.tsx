@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from "react";
 import {
   getState,
@@ -22,7 +23,7 @@ export interface PlayerProfile {
 
 export interface Player {
   id: string;
-  state: { profile: PlayerProfile };
+  state?: { profile: PlayerProfile };
   getState: (key: string) => any;
   setState: (key: string, value: any, sync?: boolean) => void;
 }
@@ -34,7 +35,7 @@ interface GameState {
   currentPlayerId: string;
   players: Player[];
   deck: (StationCard[] | Wildcard)[];
-  discardPile: (StationCard[] | Wildcard)[];
+  discardPile: (StationCard | Wildcard)[];
   actionSuccess: boolean;
 }
 
@@ -62,7 +63,7 @@ const TIME_PHASE_CARDS = 10;
 const CARDS_PER_PLAYER = 7;
 
 // Helper to generate a deck of station cards
-const generateStationDeck = (): (StationCard[] | Wildcard)[] => {
+const generateStationDeck = (): (StationCard | Wildcard)[] => {
   console.log("HERE: Generating station deck");
   const stationDeck: StationCard[] = stations.stations.map((station) => {
     const lines = station.lines.map((lineId) => {
@@ -81,8 +82,8 @@ const generateStationDeck = (): (StationCard[] | Wildcard)[] => {
 
 // Shuffle deck
 const shuffle = (
-  deck: (StationCard[] | Wildcard)[]
-): (StationCard[] | Wildcard)[] => {
+  deck: (StationCard | Wildcard)[]
+): (StationCard | Wildcard)[] => {
   return deck.sort(() => Math.random() - 0.5);
 };
 
@@ -136,23 +137,23 @@ export const GameEngineProvider: React.FC<{ children: React.ReactNode }> = ({
       console.log("START GAME: Host is initializing the game");
       setTimer(TIME_PHASE_CARDS, true);
       setRound(1, true);
+
+      // Generate a full deck and shuffle it
       const stationDeck = generateStationDeck();
-      setDeck(stationDeck, true);
       console.log("Generated deck:", stationDeck); // Log to check if deck is generated
-      players.forEach((player) => {
-        player.setState("cards", [], true);
-      });
-      distributeCards(CARDS_PER_PLAYER, stationDeck);
-      const initialDiscard = stationDeck.pop()!;
-      setDiscardPile([initialDiscard], true);
+
+      // Distribute cards to players and get remaining cards (discard pile)
+      const remainingDeck = distributeCards(CARDS_PER_PLAYER, stationDeck);
+
+      // The remaining deck becomes the discard pile
+      setDiscardPile(remainingDeck, true);
       setPhase("play", true);
     }
   };
 
-  // Distribute cards to players
+  // Distribute cards to players and return remaining deck
   const distributeCards = (nbCards: number, thisDeck: any) => {
     const newDeck = [...thisDeck];
-    console.log("D", thisDeck);
     players.forEach((player) => {
       const cards = player.getState("cards") || [];
       for (let i = 0; i < nbCards; i++) {
@@ -160,12 +161,12 @@ export const GameEngineProvider: React.FC<{ children: React.ReactNode }> = ({
         cards.push(newDeck[randomIndex]);
         newDeck.splice(randomIndex, 1);
       }
-      console.log("CARDS0", cards);
       player.setState("cards", cards, true);
-      console.log("CARDS", player.getState("cards"));
       player.setState("selectedCard", 0, true);
     });
-    setDeck(newDeck, true);
+
+    // Return the remaining deck (discard pile)
+    return newDeck;
   };
 
   useEffect(() => {

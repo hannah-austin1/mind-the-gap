@@ -26,7 +26,7 @@ const GameBoard: React.FC = () => {
 
       {isCurrentPlayer() ? (
         <div style={styles.currentPlayerMessage}>
-          <h3>It's your turn!</h3>
+          <h3>It&apos;s your turn!</h3>
         </div>
       ) : (
         <div style={styles.currentPlayerMessage}>
