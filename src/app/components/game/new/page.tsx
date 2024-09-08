@@ -1,11 +1,15 @@
-"use client"
+// app/uno/page.tsx
 
-const NewGamePage = () => {
-    return (
-        <div className="bg-blue-500">
-            Start Screen!
-        </div>
-    )
-}
+import React from "react";
+import { GameEngineProvider } from "@/app/providers/game-engine-provider";
+import GameBoard from "@/app/components/game-board";
 
-export default NewGamePage
+const UnoPage: React.FC = () => {
+  return (
+    <GameEngineProvider>
+      <GameBoard />
+    </GameEngineProvider>
+  );
+};
+
+export default UnoPage;

@@ -1,29 +1,22 @@
-"use client"
+"use client";
 
-import { useIsHost, useMultiplayerState } from "playroomkit"
+import { useIsHost, useMultiplayerState } from "playroomkit";
+import { useEffect } from "react";
 
 const StartPage = () => {
+  const isHost = useIsHost();
 
-    const isHost = useIsHost()
+  const [, setGameState] = useMultiplayerState("gameState", "start");
 
-    const [, setGameState] = useMultiplayerState('gameState', 'start')
+  const handleStartGame = () => {
+    setGameState("game/new");
+  };
 
-    const handleStartGame = () => {
-        setGameState('game/new')
-    }
+  useEffect(() => {
+    handleStartGame();
+  }, []);
 
-    return (
-        <>
-            Hello world!
-            <br />
-            {
-            isHost ?
-                <button onClick={handleStartGame}>Start game</button>
-                :
-                <>Waiting for host...</>
-            }        
-        </>
-    )
-}
+  return <>{isHost ? <>Loading...</> : <>Waiting for host...</>}</>;
+};
 
-export default StartPage
+export default StartPage;

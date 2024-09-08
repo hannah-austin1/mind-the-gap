@@ -1,0 +1,326 @@
+{
+  "stations": [
+    {
+      "station_name": "Aldgate",
+      "lines": [3, 4]
+    },
+    {
+      "station_name": "Aldgate East",
+      "lines": [5, 12]
+    },
+    {
+      "station_name": "Angel",
+      "lines": [10]
+    },
+    {
+      "station_name": "Baker Street",
+      "lines": [1, 2, 3, 4, 5]
+    },
+    {
+      "station_name": "Bank",
+      "lines": [6, 10, 12]
+    },
+    {
+      "station_name": "Barbican",
+      "lines": [3, 4, 5]
+    },
+    {
+      "station_name": "Bayswater",
+      "lines": [4, 12]
+    },
+    {
+      "station_name": "Blackfriars",
+      "lines": [4, 12]
+    },
+    {
+      "station_name": "Bond Street",
+      "lines": [2, 6]
+    },
+    {
+      "station_name": "Borough",
+      "lines": [10]
+    },
+    {
+      "station_name": "Cannon Street",
+      "lines": [4, 12]
+    },
+    {
+      "station_name": "Chancery Lane",
+      "lines": [6]
+    },
+    {
+      "station_name": "Charing Cross",
+      "lines": [1, 14]
+    },
+    {
+      "station_name": "Covent Garden",
+      "lines": [14]
+    },
+    {
+      "station_name": "Earl's Court",
+      "lines": [8, 12]
+    },
+    {
+      "station_name": "Edgware Road",
+      "lines": [1, 4, 5, 3, 12]
+    },
+    {
+      "station_name": "Elephant & Castle",
+      "lines": [1, 10]
+    },
+    {
+      "station_name": "Embankment",
+      "lines": [1, 4, 7, 14]
+    },
+    {
+      "station_name": "Euston",
+      "lines": [1, 7, 10]
+    },
+    {
+      "station_name": "Euston Square",
+      "lines": [3, 4, 5]
+    },
+    {
+      "station_name": "Farringdon",
+      "lines": [3, 4, 5, 10]
+    },
+    {
+      "station_name": "Finchley Road",
+      "lines": [2, 3]
+    },
+    {
+      "station_name": "Gloucester Road",
+      "lines": [8, 12, 14]
+    },
+    {
+      "station_name": "Goodge Street",
+      "lines": [10]
+    },
+    {
+      "station_name": "Great Portland Street",
+      "lines": [3, 4, 5]
+    },
+    {
+      "station_name": "Green Park",
+      "lines": [7, 2, 14]
+    },
+    {
+      "station_name": "High Street Kensington",
+      "lines": [8, 12]
+    },
+    {
+      "station_name": "Holborn",
+      "lines": [6, 14]
+    },
+    {
+      "station_name": "Hyde Park Corner",
+      "lines": [14]
+    },
+    {
+      "station_name": "Kennington",
+      "lines": [10]
+    },
+    {
+      "station_name": "King's Cross St. Pancras",
+      "lines": [3, 2, 10, 4, 6, 7]
+    },
+    {
+      "station_name": "Knightsbridge",
+      "lines": [14]
+    },
+    {
+      "station_name": "Lambeth North",
+      "lines": [1]
+    },
+    {
+      "station_name": "Lancaster Gate",
+      "lines": [6]
+    },
+    {
+      "station_name": "Leicester Square",
+      "lines": [11, 14]
+    },
+    {
+      "station_name": "Liverpool Street",
+      "lines": [10, 12, 5, 4, 6]
+    },
+    {
+      "station_name": "London Bridge",
+      "lines": [2, 10]
+    },
+    {
+      "station_name": "Mansion House",
+      "lines": [4, 12]
+    },
+    {
+      "station_name": "Marble Arch",
+      "lines": [6]
+    },
+    {
+      "station_name": "Marylebone",
+      "lines": [1]
+    },
+    {
+      "station_name": "Monument",
+      "lines": [4, 12]
+    },
+    {
+      "station_name": "Moorgate",
+      "lines": [3, 4, 10, 12]
+    },
+    {
+      "station_name": "Notting Hill Gate",
+      "lines": [4, 6, 14]
+    },
+    {
+      "station_name": "Old Street",
+      "lines": [10]
+    },
+    {
+      "station_name": "Oval",
+      "lines": [10]
+    },
+    {
+      "station_name": "Oxford Circus",
+      "lines": [1, 6, 7]
+    },
+    {
+      "station_name": "Paddington",
+      "lines": [5, 4, 10, 2]
+    },
+    {
+      "station_name": "Piccadilly Circus",
+      "lines": [1, 14]
+    },
+    {
+      "station_name": "Pimlico",
+      "lines": [7]
+    },
+    {
+      "station_name": "Queensway",
+      "lines": [6]
+    },
+    {
+      "station_name": "Regent's Park",
+      "lines": [1]
+    },
+    {
+      "station_name": "Russell Square",
+      "lines": [14]
+    },
+    {
+      "station_name": "St. James's Park",
+      "lines": [8, 12]
+    },
+    {
+      "station_name": "St. Paul's",
+      "lines": [6]
+    },
+    {
+      "station_name": "Sloane Square",
+      "lines": [4, 12]
+    },
+    {
+      "station_name": "South Kensington",
+      "lines": [4, 12, 14]
+    },
+    {
+      "station_name": "Southwark",
+      "lines": [2]
+    },
+    {
+      "station_name": "Stockwell",
+      "lines": [7, 10]
+    },
+    {
+      "station_name": "Temple",
+      "lines": [4, 12]
+    },
+    {
+      "station_name": "Tottenham Court Road",
+      "lines": [6, 14]
+    },
+    {
+      "station_name": "Tower Hill",
+      "lines": [4, 12]
+    },
+    {
+      "station_name": "Vauxhall",
+      "lines": [7]
+    },
+    {
+      "station_name": "Victoria",
+      "lines": [7, 8, 14]
+    },
+    {
+      "station_name": "Warren Street",
+      "lines": [7, 10]
+    },
+    {
+      "station_name": "Waterloo",
+      "lines": [1, 2, 7]
+    },
+    {
+      "station_name": "Westminster",
+      "lines": [14, 4, 12]
+    }
+  ],
+  "line_colors": {
+    "1": {
+      "line_name": "Bakerloo",
+      "color": "#B36305"
+    },
+    "2": {
+      "line_name": "Jubilee",
+      "color": "#A0A5A9"
+    },
+    "3": {
+      "line_name": "Metropolitan",
+      "color": "#9B0056"
+    },
+    "4": {
+      "line_name": "Circle",
+      "color": "#FFD300"
+    },
+    "5": {
+      "line_name": "Hammersmith & City",
+      "color": "#F3A9BB"
+    },
+    "6": {
+      "line_name": "Central",
+      "color": "#E32017"
+    },
+    "7": {
+      "line_name": "Victoria",
+      "color": "#0098D4"
+    },
+    "8": {
+      "line_name": "District",
+      "color": "#00782A"
+    },
+    "9": {
+      "line_name": "Piccadilly",
+      "color": "#003688"
+    },
+    "10": {
+      "line_name": "Northern",
+      "color": "#000000"
+    },
+    "11": {
+      "line_name": "Piccadilly",
+      "color": "#003688"
+    },
+    "12": {
+      "line_name": "District",
+      "color": "#00782A"
+    },
+    "13": {
+      "line_name": "Bakerloo",
+      "color": "#B36305"
+    },
+    "14": {
+      "line_name": "Piccadilly",
+      "color": "#003688"
+    }
+  }
+}

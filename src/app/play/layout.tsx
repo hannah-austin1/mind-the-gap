@@ -17,6 +17,7 @@ async function initializeSdk() {
     try {
       await insertCoin({
         ...baseUrlOptions,
+        turnBased: true,
       });
     } catch (error) {
       console.log(error);
